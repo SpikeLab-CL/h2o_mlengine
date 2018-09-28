@@ -1,8 +1,11 @@
 ## Making h2o batch predictions on Google ML Engine
-####Requirements
+
+###Requirements
+
 After training your model, export the `MOJO` and `h2o_genmodel.jar` and save them in Google Cloud Storage.
 
-#####Usage
+###Usage
+
 For running on Google ML Engine, launch the following command
 
 ```
