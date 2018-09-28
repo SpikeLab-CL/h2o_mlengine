@@ -1,0 +1,9 @@
+temp/
+env/
+__pycache__/
+*.pyc
+TODO.txt
+*.jar
+*.csv
+*.zip
+.DS_Store
