@@ -13,7 +13,7 @@ def main(args):
     scorer.make_predictions(input_file=input_file, output_file=output_name)
 
     save_in_gcs(output_name, args.output_dir)
-
+    print("Output file path ",args.output_dir)
     os.remove(input_file)
     os.remove(genmodel_path)
     os.remove(mojo_path)
