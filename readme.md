@@ -1,8 +1,13 @@
 ## Making h2o.ai batch predictions on Google ML Engine
 
+This little package allows to make batch predictions for h2o.ai models, the output is the original `csv` file with new columns for the prediction and each class probabilities. 
+
+The main goal of the package is making predictions for big files and heavy models, using google machine learning engine in a serverless way.
+
+
 ### Requirements
 
-After training your [h2o](http://www.h2o.ai) model, export the `MOJO` and `h2o_genmodel.jar` and save them in Google Cloud Storage.
+After training your [h2o](http://www.h2o.ai) model, export the `MOJO` (`.zip` file) and `h2o_genmodel.jar` and save them in Google Cloud Storage.
 
 ### Usage
 
