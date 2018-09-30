@@ -47,6 +47,7 @@ class H2O_Scoring():
             Returns:
                 results: None if return_as_dataframe is false otherwise pd Dataframe with prediccions
         """
+        print("Starting the prediction process...")
         cmd = "java -cp {0} hex.genmodel.tools.PredictCsv  \
                --header --mojo {1} --input {2} \
                --output {3} --decimal".format(self.genmodel_path,
@@ -54,6 +55,7 @@ class H2O_Scoring():
                                                          input_file,
                                                          output_file)
         os.system(cmd)
+        print("Predictions done...")
         self._update_input_file(input_file, output_file)
         if return_as_dataframe == True:
             return pd.read_csv(output_file)
