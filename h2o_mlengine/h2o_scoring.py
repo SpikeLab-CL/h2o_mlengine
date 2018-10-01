@@ -45,7 +45,7 @@ class H2O_Scoring():
                 output_file: string path to the output file.
                 return_as_dataframe: bool if True returns a pandas dataframe with the predicions
             Returns:
-                results: None if return_as_dataframe is false otherwise pd Dataframe with prediccions
+                results: output_file dir if return_as_dataframe is False otherwise pd Dataframe with prediccions
         """
         print("Starting the prediction process...")
         cmd = "java -cp {0} hex.genmodel.tools.PredictCsv  \
@@ -60,4 +60,4 @@ class H2O_Scoring():
         if return_as_dataframe == True:
             return pd.read_csv(output_file)
         else:
-            return None
+            return output_file

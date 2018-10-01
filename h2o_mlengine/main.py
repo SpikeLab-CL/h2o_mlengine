@@ -10,10 +10,10 @@ def main(args):
     output_name = args.output_name
     
     scorer = H2O_Scoring(mojo_path=mojo_path, genmodel_path=genmodel_path)
-    scorer.make_predictions(input_file=input_file, output_file=output_name)
+    output = scorer.make_predictions(input_file=input_file, output_file=output_name)
 
-    save_in_gcs(output_name, args.output_dir)
-    print("Predictions stored at: ",args.output_dir)
+    save_in_gcs(output, args.output_dir)
+    print("Predictions stored at: ", args.output_dir)
     print("Cleaning files...")
     os.remove(input_file)
     os.remove(genmodel_path)
