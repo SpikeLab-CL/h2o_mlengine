@@ -14,6 +14,7 @@ def main(args):
 
     save_in_gcs(output_name, args.output_dir)
     print("Predictions stored at: ",args.output_dir)
+    print("Cleaning files...")
     os.remove(input_file)
     os.remove(genmodel_path)
     os.remove(mojo_path)
