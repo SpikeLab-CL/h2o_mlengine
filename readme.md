@@ -33,3 +33,7 @@ For running on your local computer, go to the `h2o_mlengine` folder and lauch:
 ```
 python main.py --mojo_path gs://path/to/mojo.zip --genmodel_path gs://path/to/h2o-genmodel.jar --input_file gs://path/to/input.csv --output_dir gs://bucket/ --output_name output_name.csv
 ```
+You can track what is happening using the command:
+```
+gcloud ml-engine jobs describe JOB_NAME
+```
